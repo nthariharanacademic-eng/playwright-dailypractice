@@ -1,0 +1,17 @@
+{
+  "name": "playwrightpractice-09022026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sample" : "npx playwright test --grep @sample --headed",
+    "dialog": "npx playwright test --grep @DIA --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.2"
+  }
+}
