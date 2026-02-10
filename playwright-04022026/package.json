@@ -1,0 +1,18 @@
+{
+  "name": "playwright-04022026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deb" : "npx playwright test --grep @APIRSP --project=edge --headed",
+    "chrome": "npx playwright test --project=chrome --headed",
+    "edge": "npx playwright test --project=edge --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0"
+  }
+}
