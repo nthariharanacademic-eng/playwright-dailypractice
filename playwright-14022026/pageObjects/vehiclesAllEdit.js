@@ -43,23 +43,23 @@ class vehiclesAllEdit{
 
         
 
-        await this.Wrapper.unblockWrapper(this.vehicleYear,() => this.vehicleYear.selectOption(userdata.vehicleYear));
-        await this.Wrapper.unblockWrapper(this.vehicleMake,() => this.vehicleMake.selectOption(userdata.vehicleMake));
-        await this.Wrapper.unblockWrapper(this.vehicleModel,() => this.vehicleModel.selectOption(userdata.vehicleModel));
-        await this.Wrapper.unblockWrapper(this.vehicleUse,() => this.vehicleUse.selectOption(userdata.vehicleUse));
-        await this.Wrapper.unblockWrapper(this.NetworkCompanyIndicator,() => this.NetworkCompanyIndicator.check());
-        await this.Wrapper.unblockWrapper(this.CommuteDaysPerWk,() => this.CommuteDaysPerWk.selectOption(userdata.vechicleCommuteDays));
-        await this.Wrapper.unblockWrapper(this.OneWayCommuteMiles ,() => this.OneWayCommuteMiles.fill(userdata.vechicleCommuteMiles));   
-        await this.Wrapper.unblockWrapper(this.GaragingZip, () => expect(this.GaragingZip).toHaveValue(userdata.zip));
-        await this.Wrapper.unblockWrapper(this.OwnOrLease ,() => this.OwnOrLease.selectOption(userdata.vehicleOwnLease));
-        await this.Wrapper.unblockWrapper(this.LengthOfOwnership ,() => this.LengthOfOwnership.selectOption(userdata.vehicleLenghtOfOwnership));
-        await this.Wrapper.unblockWrapper(this.AnnualMileageForRate ,() => this.AnnualMileageForRate.selectOption(userdata.vehicleMileageForRate));
-        await this.Wrapper.unblockWrapper(this.saveVehicle ,() => this.saveVehicle.click());
-        await this.Wrapper.unblockWrapper(this.savedVehicleSection , () => expect(this.savedVehicleSection).toBeVisible());
+        await this.Wrapper.unblockWrapper(this.vehicleYear,() => this.vehicleYear.selectOption(userdata.vehicleYear),true);
+        await this.Wrapper.unblockWrapper(this.vehicleMake,() => this.vehicleMake.selectOption(userdata.vehicleMake),true);
+        await this.Wrapper.unblockWrapper(this.vehicleModel,() => this.vehicleModel.selectOption(userdata.vehicleModel),true);
+        await this.Wrapper.unblockWrapper(this.vehicleUse,() => this.vehicleUse.selectOption(userdata.vehicleUse),true);
+        await this.Wrapper.unblockWrapper(this.NetworkCompanyIndicator,() => this.NetworkCompanyIndicator.check(),true);
+        await this.Wrapper.unblockWrapper(this.CommuteDaysPerWk,() => this.CommuteDaysPerWk.selectOption(userdata.vechicleCommuteDays),true);
+        await this.Wrapper.unblockWrapper(this.OneWayCommuteMiles ,() => this.OneWayCommuteMiles.fill(userdata.vechicleCommuteMiles),true);   
+        await this.Wrapper.unblockWrapper(this.GaragingZip, () => expect(this.GaragingZip).toHaveValue(userdata.zip),true);
+        await this.Wrapper.unblockWrapper(this.OwnOrLease ,() => this.OwnOrLease.selectOption(userdata.vehicleOwnLease),true);
+        await this.Wrapper.unblockWrapper(this.LengthOfOwnership ,() => this.LengthOfOwnership.selectOption(userdata.vehicleLenghtOfOwnership),true);
+        await this.Wrapper.unblockWrapper(this.AnnualMileageForRate ,() => this.AnnualMileageForRate.selectOption(userdata.vehicleMileageForRate),true);
+        await this.Wrapper.unblockWrapper(this.saveVehicle ,() => this.saveVehicle.click(),true);
+        await this.Wrapper.unblockWrapper(this.savedVehicleSection , () => expect(this.savedVehicleSection).toBeVisible(),true);
         await expect(this.savedYear).toHaveText(userdata.vehicleYear);
         await expect(this.savedMake).toHaveText(userdata.vehicleMake);
         await expect(this.savedModel).toHaveText(userdata.vehicleModel);
-        await this.Wrapper.unblockWrapper(this.btnContinue, ()=> this.btnContinue.click());
+        await this.Wrapper.unblockWrapper(this.btnContinue, ()=> this.btnContinue.click(),true);
         await expect(this.progressivePage).toHaveURL(/.*DriversAddPniDetails/);
         await this.progressivePage.waitForLoadState('domcontentloaded');    
     }

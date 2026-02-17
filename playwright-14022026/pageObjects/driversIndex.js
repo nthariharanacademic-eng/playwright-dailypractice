@@ -17,7 +17,7 @@ class driversIndex{
     async driversIndex(){
         await expect(this.page_content).toBeVisible();
         await expect(this.driverName).toHaveText(userdata.fname+" "+userdata.lname);
-        await this.Wrapper.unblockWrapper(this.btnContinue, () => this.btnContinue.click());
+        await this.Wrapper.unblockWrapper(this.btnContinue, () => this.btnContinue.click(),true);
         await expect(this.progressivePage).toHaveURL(/.*DriversEditNoCreditHitPniDetails/);
         await this.progressivePage.waitForLoadState('domcontentloaded');
     }

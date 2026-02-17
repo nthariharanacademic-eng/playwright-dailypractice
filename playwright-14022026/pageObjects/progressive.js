@@ -66,11 +66,11 @@ class progressive {
 
     async NameEdit() {
         await expect(this.nameEditForm).toBeVisible();
-        await this.Wrapper.unblockWrapper(this.fname, () => this.fname.fill(userdata.fname));
-        await this.Wrapper.unblockWrapper(this.lname, () => this.lname.fill(userdata.lname));
-        await this.Wrapper.unblockWrapper(this.dob, () => this.dob.fill(userdata.dob));
-        await this.Wrapper.unblockWrapper(this.primaryEmail,() =>  this.primaryEmail.fill(userdata.mailid));
-        await this.Wrapper.unblockWrapper(this.btnContinue,() =>  this.btnContinue.click());
+        await this.Wrapper.unblockWrapper(this.fname, () => this.fname.fill(userdata.fname),true);
+        await this.Wrapper.unblockWrapper(this.lname, () => this.lname.fill(userdata.lname),true);
+        await this.Wrapper.unblockWrapper(this.dob, () => this.dob.fill(userdata.dob),true);
+        await this.Wrapper.unblockWrapper(this.primaryEmail,() =>  this.primaryEmail.fill(userdata.mailid),true);
+        await this.Wrapper.unblockWrapper(this.btnContinue,() =>  this.btnContinue.click(),true);
         await expect(this.progressivePage).toHaveURL(/.*AddressEdit/);
     }
 

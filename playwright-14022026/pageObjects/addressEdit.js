@@ -25,14 +25,14 @@ class addressEdit{
 
     async addressEdit() {
         await expect(this.pageContent).toBeVisible();
-        await this.Wrapper.unblockWrapper(this.street,()=>this.street.pressSequentially(userdata.street));
+        await this.Wrapper.unblockWrapper(this.street,()=>this.street.pressSequentially(userdata.street),true);
         await expect(this.streetOptions).toBeVisible();
-        await this.Wrapper.unblockWrapper(this.streetOptions,() => this.streetOptions.click());
+        await this.Wrapper.unblockWrapper(this.streetOptions,() => this.streetOptions.click(),true);
         await expect(this.city).toHaveValue(userdata.city);
         await expect(this.state).toHaveValue(userdata.state);
         await expect(this.zip).toHaveValue(userdata.zip);
-        await this.Wrapper.unblockWrapper(this.zipType,()=>this.zipType.check());
-        await this.Wrapper.unblockWrapper(this.startQuote,()=>this.startQuote.click()); 
+        await this.Wrapper.unblockWrapper(this.zipType,()=>this.zipType.check(),true);
+        await this.Wrapper.unblockWrapper(this.startQuote,()=>this.startQuote.click(),true); 
         await expect(this.progressivePage).toHaveURL(/.*VehiclesAllEdit/);
         await this.progressivePage.waitForLoadState('domcontentloaded') ;
     }

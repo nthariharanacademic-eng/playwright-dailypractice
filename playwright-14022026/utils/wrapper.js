@@ -7,9 +7,12 @@ class wrapper{
         this.page = page;
     }
 
-    /** @param {import('@playwright/test').Locator} field */
+    /** @param {import('@playwright/test').Locator} field
+     *  @param {boolean} skipfocus
+     */
     
-    async unblockWrapper(field, action) {
+    
+    async unblockWrapper(field, action, skipfocus) {
 
         //Locator for ovrelay that intercepts clicks
         const blocker1 = this.page.locator('#FaderBanner');
@@ -19,7 +22,10 @@ class wrapper{
         await expect(blocker1).toBeHidden();
         await expect(blocker2).toBeHidden();
 
-        await field.focus();
+        if (skipfocus == true) {
+            await field.focus();
+        }
+        
         await action();
 
         await expect(blocker1).toBeHidden();

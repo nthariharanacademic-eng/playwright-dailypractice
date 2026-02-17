@@ -4,7 +4,7 @@ const addressEdit = require('./addressEdit');
 const vehiclesAllEdit = require('./vehiclesAllEdit');
 const driversAddPniDetails = require('./driversAddPniDetails');
 const driversIndex = require('./driversIndex');
-const driversEditNoCreditHitPniDetails = require('./driversEditNoCreditHit');
+const driversEditNoCreditHitPniDetails = require('./driversEditNoCreditHit.js');
 
 class poManager {
     

@@ -37,15 +37,15 @@ class policyGenius {
     }
 
     async partnerOffers() {   
-        await this.Wrapper.unblockWrapper(this.currentlyInsured, () => this.currentlyInsured.getByText('Yes').click());
-        await this.Wrapper.unblockWrapper(this.multiVehicle,() => this.multiVehicle.getByText('Yes').click());
-        await this.Wrapper.unblockWrapper(this.homeOwner,() => this.homeOwner.getByText('Yes').click());
-        await this.Wrapper.unblockWrapper(this.homeOwner,() => this.homeOwner.getByText('Yes').click());
-        await this.Wrapper.unblockWrapper(this.enterAge,() => this.enterAge.fill(userdata.age));
-        await this.Wrapper.unblockWrapper(this.enterZip,() => this.enterZip.fill(userdata.zip));
-        await this.Wrapper.unblockWrapper(this.btnViewOptions,() => this.btnViewOptions.click());
+        await this.Wrapper.unblockWrapper(this.currentlyInsured, () => this.currentlyInsured.getByText('Yes').click(),true);
+        await this.Wrapper.unblockWrapper(this.multiVehicle,() => this.multiVehicle.getByText('Yes').click(),true);
+        await this.Wrapper.unblockWrapper(this.homeOwner,() => this.homeOwner.getByText('Yes').click(),true);
+        await this.Wrapper.unblockWrapper(this.homeOwner,() => this.homeOwner.getByText('Yes').click(),true);
+        await this.Wrapper.unblockWrapper(this.enterAge,() => this.enterAge.fill(userdata.age),true);
+        await this.Wrapper.unblockWrapper(this.enterZip,() => this.enterZip.fill(userdata.zip),true);
+        await this.Wrapper.unblockWrapper(this.btnViewOptions,() => this.btnViewOptions.click(),true);
         await expect(this.providerOptions.last()).toBeVisible();
-        await this.Wrapper.unblockWrapper(this.selectProgressive,() => this.selectProgressive.click());
+        await this.Wrapper.unblockWrapper(this.selectProgressive,() => this.selectProgressive.click(),true);
 
         this.progressivePage = await this.popupPromise;
 
