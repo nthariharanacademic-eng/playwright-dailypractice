@@ -1,0 +1,24 @@
+{
+  "name": "playwright-19022026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "all": "npx playwright test",
+    "dialog": "npx playwright test --grep @DIA",
+    "child": "npx playwright test --grep @CHILD",
+    "login": "npx playwright test --grep @LOGIN"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.52.0",
+    "allure-playwright": "^3.4.5"
+  }
+}

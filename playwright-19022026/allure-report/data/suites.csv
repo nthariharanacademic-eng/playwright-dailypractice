@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5912","JavaScript Dialog Box @DIA","chrome","2026-02-19","passed","2026-02-19","","javaScriptDialog.spec.js","",""
+"","6972","Child Window @CHILD","chrome","2026-02-19","passed","2026-02-19","","childWindow.spec.js","",""
+"","433","API get login Token @LOGIN","chrome","2026-02-19","passed","2026-02-19","","apiGetToken.spec.js","",""
