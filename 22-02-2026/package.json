@@ -1,0 +1,20 @@
+{
+  "name": "22-02-2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login" :"npx playwright test --grep @LOGINAPI"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.52.0"
+  }
+}
