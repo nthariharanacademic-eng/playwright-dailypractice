@@ -1,0 +1,20 @@
+{
+  "name": "12-03-2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dialog" : "npx playwright test --grep @DIA --project=chrome",
+    "child" : "npx playwright test --grep @CHILD --project=chrome",
+    "token" : "npx playwright test --grep @GETTOKEN --project=chrome",
+    "order" : "npx playwright test --grep @APIORDER --project=chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  }
+}
