@@ -6,7 +6,9 @@
   "scripts": {
     "all" : "npx playwright test",
     "direct" : "npx playwright test --grep @DIRECT",
-    "tokenfix" : "npx playwright test --grep @TOKENFIX"
+    "tokenfix" : "npx playwright test --grep @TOKENFIX",
+    "order" : "npx playwright test --grep @ORDER",
+    "inter" : "npx playwright test --grep @INTER"
   },
   "keywords": [],
   "author": "",

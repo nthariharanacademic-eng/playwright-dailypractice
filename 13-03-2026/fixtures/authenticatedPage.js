@@ -1,6 +1,13 @@
 const base = require('@playwright/test');
 const { expect } = base;
 
+/***
+ *  @typedef {object} myfixture
+ *  @property {import('@playwright/test').Page} authenticatedPage
+ */
+
+/*** @type {import('@playwright/test').TestType<myfixture,{}>} */
+
 exports.test = base.test.extend({
     authenticatedPage: async ({ request ,browser}, use) => {
 
