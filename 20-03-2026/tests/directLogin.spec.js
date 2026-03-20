@@ -8,7 +8,7 @@ test.describe("Get Authenticated Page via Fixtures", async()=>{
         const BASEURL = 'https://rahulshettyacademy.com/client/#/dashboard/dash';
         const navbar = authPage.getByRole('navigation');
 
-        test.step("Navigate to site with fetched token.No Login needed", async()=>{
+        await test.step("Navigate to site with fetched token.No Login needed", async()=>{
             await authPage.goto(BASEURL);
             await expect(navbar).toBeVisible();
         });

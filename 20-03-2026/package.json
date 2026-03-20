@@ -8,7 +8,11 @@
     "dialog" : "npx playwright test --grep @DIA",
     "child" : "npx playwright test --grep @CHILD",
     "auth" : "npx playwright test --grep @AUTH",
-    "direct" : "npx playwright test --grep @DIR"
+    "direct" : "npx playwright test --grep @DIR",
+    "inter" :"npx playwright test --grep @INTER",
+    "mock" : "npx playwright test --grep @MOCK",
+    "frame" : "npx playwright test --grep @FRAME",
+    "session": "npx playwright test --grep @SESSION"
   },
   "keywords": [],
   "author": "",
