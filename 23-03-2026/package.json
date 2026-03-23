@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "data" : "npx playwright test --grep @DATA",
-    "auth" : "npx playwright test --grep @AUTH"
+    "auth" : "npx playwright test --grep @AUTH",
+    "inter" : "npx playwright test --grep @INTER",
+    "mock" : "npx playwright test --grep @MOCK"
   },
   "keywords": [],
   "author": "",
