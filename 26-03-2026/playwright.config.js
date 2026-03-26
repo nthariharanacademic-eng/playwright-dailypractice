@@ -1,0 +1,27 @@
+const  {defineConfig} = require('@playwright/test');
+const {loadEnvFile} = require('node:process');
+
+loadEnvFile();
+
+export default defineConfig({
+  testDir : './tests',
+  timeout : 30*1000,
+  expect:{
+    timeout : 15*1000
+  },
+  reporter : 'html',
+  projects : [
+    {
+      name: 'chrome',
+      use:{
+        browserName : 'chromium',
+        viewport : null,
+        launchOptions : {
+          args:['--start-maximized']
+        },
+        trace : 'on',
+        screenshot : 'on'
+      }
+    }
+  ]
+});
