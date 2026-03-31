@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "fix":"npx playwright test --grep @FIX",
-    "auth" : "npx playwright test --grep @AUTH"
+    "auth" : "npx playwright test --grep @AUTH",
+    "inter" : "npx playwright test --grep @INTER"
   },
   "keywords": [],
   "author": "",
