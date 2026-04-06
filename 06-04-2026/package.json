@@ -1,0 +1,19 @@
+{
+  "name": "06-04-2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fix" :"npx playwright test --grep @FIX",
+    "auth" : "npx playwright test --grep @AUTH",
+    "dialog" : "npx playwright test --grep @DIA"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2"
+  }
+}
