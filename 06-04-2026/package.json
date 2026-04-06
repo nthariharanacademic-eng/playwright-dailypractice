@@ -6,7 +6,8 @@
   "scripts": {
     "fix" :"npx playwright test --grep @FIX",
     "auth" : "npx playwright test --grep @AUTH",
-    "dialog" : "npx playwright test --grep @DIA"
+    "dialog" : "npx playwright test --grep @DIA",
+    "child" : "npx playwright test --grep @CHILD"
   },
   "keywords": [],
   "author": "",
